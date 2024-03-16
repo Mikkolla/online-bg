@@ -24,6 +24,10 @@
 	@include tablet-small{
 		min-height: 80px;
 	}
+
+	@include mobile{
+		justify-content: flex-end;
+	}
 		
 	&__backdrop {
 		background: rgba(0, 0, 0, 0.6);
@@ -84,14 +88,18 @@
 	}
 
 	&__a {
-		color: var(--colors-white, #FFF);
+		color:  #FFF;
 
-/* Buttons / Middle */
-font-family: DM Sans;
+
+font-family: var(--ff);
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
-line-height: 26px; /* 144.444% */
+line-height: 26px; 
+		&:hover{
+			transition: var(--transition);
+			font-size: 19px;
+		}
 		@include tablet {
 			color: var(--c-text-white);
 		}
@@ -101,6 +109,8 @@ line-height: 26px; /* 144.444% */
 		position: absolute;
 		top: 93px;
 	}
+
+	
 }
 
 .icon-menu,
@@ -113,19 +123,21 @@ line-height: 26px; /* 144.444% */
 	}
 
 	@include tablet-small{
-		display: inline-block;
+		display: inline-flex;
+		
+
 	}
 }
 
 .active{
 	color: var(--colors-white, #b39bc4);
 
-/* Buttons / Middle */
+
 font-family: DM Sans;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
-line-height: 26px; /* 144.444% */
+line-height: 26px; 
 }
 
 

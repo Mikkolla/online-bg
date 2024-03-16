@@ -1,6 +1,26 @@
 const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 
-var deploy      = require('gulp-gh-pages');
+// const paths = {
+// 	scripts: {
+// 		src: './',
+// 		dest: './build' ,
+// 	}
+// }
+
+// async function buildHtml()  {
+// 	gulp.src(['*.html'])
+// 		.pipe(gulp.dest(paths.scripts.dest));
+// }
+
+// exports.default = async function() {
+// 	buildHtml();
+// }
+
+// gulp.task('deploy', function() {
+// 	return gulp.src('./build/**/*')
+// 	  .pipe(ghPages());
+//   });
 
 // Tasks
 require('./gulp/dev.js');
@@ -14,11 +34,6 @@ gulp.task(
 		gulp.parallel('server:dev', 'watch:dev')
 	)
 );
-
-gulp.task('deploy', function () {
-	return gulp.src("./dist/**/*")
-	  .pipe(deploy())
-  });
 
 gulp.task(
 	'prod',

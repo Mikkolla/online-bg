@@ -1,10 +1,11 @@
 html, body {
+	
 	height: 100%;
 }
 body {
 	font-family: var(--ff);
 	display: grid;
-	background-color: #695D9A;
+	background-color: var(--main-bg);
 	grid-template-rows: auto 1fr auto;
 }
 .container {
